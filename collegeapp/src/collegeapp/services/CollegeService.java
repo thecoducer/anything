@@ -1,11 +1,13 @@
 package collegeapp.services;
 
 import java.util.*;
-import java.io.*;
+
 import collegeapp.models.College;
 
+import java.io.*;
+
 public class CollegeService {
-    int collegeID;
+	int collegeID;
     String collegeName;
     String courseType;
     String city;
@@ -105,6 +107,7 @@ public class CollegeService {
             writer.close();
             csvFile.delete();
             tempCsv.renameTo(csvFile);
+            tempCsv.delete();
 
         } catch (Exception e) {
             e.printStackTrace();
